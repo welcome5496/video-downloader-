@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/download.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/download",
+      "methods": ["POST"],
+      "dest": "api/download.js"
+    }
+  ]
+}
